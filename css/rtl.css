@@ -47,6 +47,20 @@ margin-left: unset;
     transform: translateX(-5px);
 }
 
+.episode-name {
+ 
+    padding-right: 100px;
+    padding-left: unset;
+ 
+}
+.episodes-list .episode-number {
+    left: unset;
+    right:40px;
+}
+.episodes-navigation a:last-child {
+    margin-left: unset;
+    margin-right: auto;
+}
 @media screen and (max-width:850px) {
     .nav-menu{
         right: -120%;

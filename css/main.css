@@ -119,7 +119,7 @@ img{
     background-color: var(--main-color);
     transition: .3s ease-in-out;
 }
-.btn-hover:hover::before{
+.btn-hover:hover::before,.btn.active::before{
     width: 100%;
 }
 .hamburger-menu{
@@ -423,6 +423,125 @@ footer .content{
 
 
 
+.season-item{
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    border-right: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+    background-color: var(--box-bg);
+ }
+
+
+.watch-section{
+    padding-bottom: 80px;
+    background-color:  var(--box-bg);
+    background-image: url(https://video.okanime.online/wp-content/themes/Original-v1/images/background-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+}
+ .episodes .title {
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+.episodes-list{
+    height: 480px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+.episodes-list ul li a{
+    position: relative;
+    display: block;
+    height: 60px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--body-bg);
+    transition: 0.3s linear;
+}
+.episodes-list ul li a:hover,
+.episodes-list ul li a.active{
+    border-bottom: 1px solid var(--main-color);
+}
+.episodes-list ul li a:hover .paly-icon,
+.episodes-list ul li a.active .paly-icon{
+    color: var(--main-color);
+}
+.episode-name{
+    padding: 8px 0px 8px 100px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.episodes-list .episode-name{
+    width: 100%;
+    font-size: 14px;
+}
+
+.episodes-list .episode-number,.episodes-list .paly-icon{
+    position: absolute;
+    width: 40px;
+    top:30px;
+    transform: translateY(-50%);
+    display:inline-flex;
+    justify-content: center;
+
+}
+.episodes-list .episode-number{
+    left: 40px;
+}
+.embed-servers{
+    margin: 10px auto;
+}
+.server-link{
+    padding: 10px 5px;
+    display: inline-block;
+    cursor: pointer;
+
+}
+.server-link.active,.server-link:hover{
+    background-color: var(--main-color);
+}
+.embed-player{
+    position: relative;
+    padding-bottom: 55%;
+
+}
+.embed-player iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.embed-player .iframe-player{
+    width: 100%;
+    height: 100%;
+}
+.navigation{
+    width: 100%;
+}
+.episodes-navigation{
+    width: 100%;
+    margin:20px auto;
+    display:flex;
+ 
+    align-items: center;
+
+}
+.episodes-navigation a:hover{
+    color: var(--main-color);
+}
+   
+.episodes-navigation a:last-child{
+ margin-left: auto;
+}
+
+
+
+
+
+
 
 
 
@@ -444,6 +563,20 @@ footer .content{
         font-size: 12px;
     }
    
+}
+@media screen and ( max-width: 991px){
+    .episodes-list .episode-name{
+        font-size: 18px;
+    }
+    .reverse-col-md{
+        flex-flow: column-reverse;
+    }
+    .episodes .title{
+        font-size: 20px;
+    }
+    .episodes  {
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width:850px) {
@@ -517,7 +650,9 @@ footer .content{
         font-size: 2rem;
     }
  
- 
+    .episodes-list .episode-name{
+        font-size: unset;
+    }
     
 }
 /* end responsive  */

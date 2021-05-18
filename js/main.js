@@ -31,9 +31,6 @@ $(document).ready( _ => {
         }
         
      });
-
- 
-
    $('#top-movies').owlCarousel({
    
     items:2,
@@ -56,8 +53,7 @@ $(document).ready( _ => {
             items:6,
         }
     }
-});
- 
+    });
    $(".movies-slid").owlCarousel({
    
     items:2,
@@ -85,7 +81,36 @@ $(document).ready( _ => {
             nav:true,
         },
     }
-});
+    });
+    $('#seasons-slid').owlCarousel({
+        items:1,
+        loop:false,
+        margin:10,
+        nav:false,
+        rtl:isRTL,
+        responsive:{
+            361:{
+                items:2,
+            },
+            720:{
+                items:3,
+            },
+            1280:{
+                items:5,
+            },
+            1600:{
+                items:8,
+            },
 
+        }
+    });
+    let iframePlayer=$("#iframe-player");
+    $(".server-link").click(e=> {
+        console.log(e.target.classList);
+        $('.server-link.active').removeClass("active");
+        e.target.classList.add("active");
+        iframePlayer.attr('src',e.target.dataset.link );
+    });
+     
 });
 
