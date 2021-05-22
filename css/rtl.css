@@ -7,6 +7,10 @@ html{
     margin-right: 30px;
     margin-left: 0px;
 }
+.c-n-i-dropDown::before{
+    left: unset;
+    right: 10%;
+}
 .btn-hover::before{
     left:unset;
     right: 0;
@@ -60,6 +64,12 @@ margin-left: unset;
 .episodes-navigation a:last-child {
     margin-left: unset;
     margin-right: auto;
+}
+.search-bar .search-field i {
+    left: unset;
+    right:20px;
+    margin: auto 5px;
+    transform: translate(50%,-50%) scaleX(-1);
 }
 @media screen and (max-width:850px) {
     .nav-menu{
